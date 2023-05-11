@@ -121,10 +121,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#project-spotlight">Project Spotlight</a></li>
-            <li class="nav-item"><a class="nav-link" href="#prototypes">Prototypes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#early-games">Early Games</a></li>
-          </ul>
+            <li class="nav-item"><a class="nav-link" href="#project-spotlight">Games</a></li>
+            <li class="nav-item"><a class="nav-link" href="#prototypes">Learning Projects & Prototypes</a></li>
           </ul>
         </div>
       </div>
@@ -143,7 +141,7 @@
           <h3 style="display: inline;">I'm a game programmer.</h3>
           <p>
             <br>I started making games back in 2017 and have become steadily more passionate ever since. I love spending time with my cat maddie and paritipating in game jams either solo or with my friends! <br>
-            <br>Above is my demo reel, you can also view it <a href="https://youtu.be/6SmHRBcUr-U" target="_blank">here</a>. <br>Hover on a game thumbnail below to preview gameplay!
+            <br>Above is my game programming demo reel, you can also view it <a href="https://youtu.be/6SmHRBcUr-U" target="_blank">here</a>.<br><b>Hover on a thumbnail below to preview gameplay!</b> (If you're on mobile, press and hold to preview)
           </p>
         </div>
       </div>
@@ -152,33 +150,38 @@
     <div>
       <hr>
       <div class="container margin-top-space">
-        <h1 class="text-center" id="project-spotlight">Project Spotlight</h1>
+        <h1 class="text-center" id="project-spotlight">Games I've Worked On</h1>
         <!-- <p class="text-center">Recent projects I am proud of!</p> -->
       </div>
       <div class="album py-5">
         <div class="container">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col" id="spotlight-1" class="animate__animated">
+            <div class="col" id="spotlight-3" class="animate__animated animate__delay-4s">
               <div class="card shadow-sm">
-                <a href="https://madsoup-png.itch.io/at-the-station" target=”_blank”>
-                  <img class="card-img-top static" src="img/ats.png" width="100%" height="225">
-                  <img class="card-img-top active" src="img/ats.gif" width="100%" height="225">
+                <a href="https://madsoup-png.itch.io/logisticlaw">
+                  <img class="card-img-top static" src="img/lc.png" width="100%" height="225">
+                  <img class="card-img-top active" src="img/lc.gif" width="100%" height="225">
                 </a>
                 <div class="card-body">
-                  <h4 class="card-text">At The Station</h4>
-                  <span class="badge text-bg-main">Unity / C#</span>
+                  <h4 class="card-text">Logisticlaw</h4>
+                  <span class="badge text-bg-main">Godot 4.0 / GDScript</span>
                   <span class="badge text-bg-programming">Programming</span>
+                  <span class="badge text-bg-art">Art</span>
                   <span class="badge text-bg-vfx">VFX</span>
-                  <span class="badge text-bg-art">Art / Animation</span>
-                  <p class="card-text">One week long game jam about meeting a strange dog at a station. <br>
-                    <br> ✔ 2D Platforming <br> ✔ Dialogue & interaction system <br> ✔ Cutscenes using Unity Timeline <br> ✔ VFX using Unity Particle System <br> ✔ Processing Effects via URP <br> ✔ Pixel art & animation <br>
+                  <span class="badge text-bg-audio">Audio</span>
+                  <p class="card-text"> Ludum Dare 53 entry made on a team about using a claw to frantically load packages onto a truck. <br>
+                    <br> ✔ Programmed claw mechanic using the DampedSpringJoint2D node
+                    <br> ✔ Implemented package lifing / placing logic and box highlighting mechanic
+                    <br> ✔ Created packages, claw, character icons, truck and background sprites via Aseprite
+                    <br> ✔ Designed box hitting floor particles using GPUParticles2D
+                    <br> ✔ Composed main menu music
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://madsoup-png.itch.io/at-the-station','_blank')">Play</button>
                       <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://madsoup-png.itch.io/logisticlaw','_blank')">Play</button>
                     </div>
-                    <small>October 2022</small>
+                    <small>April 2023</small>
                   </div>
                 </div>
               </div>
@@ -195,7 +198,14 @@
                   <span class="badge text-bg-programming">Programming</span>
                   <span class="badge text-bg-vfx">VFX</span>
                   <p class="card-text">Collaborative project made within one week about using a camera on a golf ball to take pictures of a giant crab kaiju. <br>
-                    <br> ✔ Camera movement <br> ✔ Photo quest system <br> ✔ In-editor city randomization tool <br> ✔ Explosion VFX <br> ✔ Prototyped ball behaviour using projectile motion <br> ✔ Menu art concept
+                    <br> ✔ Programmed camera movement and photo quest system<br> 
+                    ✔ Wrote an in editor tool to randomize city layouts using GridMaps
+                    <br> 
+                    ✔ Designed kaiju explosion VFX with GPUParticles3D and Visual 
+                    Shaders <br> 
+                    ✔ Prototyped ball behaviour by implementing projectile motion based on 
+                    target location <br> 
+                    ✔ Conceptualized main menu art
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -207,26 +217,36 @@
                 </div>
               </div>
             </div>
-            <div class="col" id="spotlight-3" class="animate__animated animate__delay-4s">
+
+            <div class="col" id="spotlight-1" class="animate__animated">
               <div class="card shadow-sm">
-                <img class="card-img-top static" src="img/w.png" width="100%" height="225">
-                <img class="card-img-top active" src="img/w-2.gif" width="100%" height="225">
+                <a href="https://madsoup-png.itch.io/at-the-station" target=”_blank”>
+                  <img class="card-img-top static" src="img/ats.png" width="100%" height="225">
+                  <img class="card-img-top active" src="img/ats.gif" width="100%" height="225">
+                </a>
                 <div class="card-body">
-                  <h4 class="card-text">Wobblie</h4>
-                  <span class="badge text-bg-main">Godot 3.5 / GDScript</span>
+                  <h4 class="card-text">At The Station</h4>
+                  <span class="badge text-bg-main">Unity / C#</span>
                   <span class="badge text-bg-programming">Programming</span>
                   <span class="badge text-bg-vfx">VFX</span>
-                  <p class="card-text"> Tool where you can draw shakey art with editable parameters. Still in active development. <br>
-                    <br> ✔ Intuitive drawing system <br> ✔ Editable line parameters <br> ✔ Line wobble shader <br> ✔ Layers and undo / redo functionality <br>
+                  <span class="badge text-bg-art">Art / Animation</span>
+                  <p class="card-text">One week long game jam about meeting a strange dog at a station. <br>
+                    <br>
+                    ✔ Programmed 2D platforming, dialogue and interaction system
+                    <br> 
+                    ✔ Directed and implemented cutscenes with Unity Timeline
+                    <br> 
+                    ✔ Designed dust (air), dust trail and cherry blossom particle effects with 
+                    Unity's Particle System <br> 
+                    ✔ Polished game visuals via Post Processing Effects with URP <br> 
+                    ✔ Created pixel art assets and animations <br>
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://madsoup-png.itch.io/at-the-station','_blank')">Play</button>
                       <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
-                      <p>
-                        <i>Source Available Soon!</i>
-                      </p>
                     </div>
-                    <small>April 2023</small>
+                    <small>October 2022</small>
                   </div>
                 </div>
               </div>
@@ -237,12 +257,12 @@
     </div>
     <hr>
     <div class="container margin-top-space" id="prototypes">
-      <h1 class="text-center">Prototypes</h1>
-      <p class="text-center">Bite-sized demos made in 1-2 days made for learning and fun.</p>
+      <h1 class="text-center">Learning Projects & Prototypes</h1>
+      <p class="text-center">Bite-sized demos made in 1-2 days made to research, learn and challenge new ideas.</p>
     </div>
     <div class="album py-5">
       <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
           <div class="col">
             <div class="card shadow-sm">
               <!-- <a href="#" target=”_blank”> -->
@@ -254,7 +274,11 @@
                 <span class="badge text-bg-main">Godot 4 / GDScript</span>
                 <span class="badge text-bg-programming">Programming</span>
                 <p class="card-text">First person photo taking sim, where you can identify the objects in the photos you take <br>
-                  <br> ✔ Camera behaviour <br> ✔ Player controller <br> ✔ Album view <br> ✔ Interactive photos <br> ✔ Environment & UI tweens <br>
+                  <br> ✔ Programmed first person camera and player controller
+                  <br> ✔ Implemented photo taking mechanic and album view
+                  <br> ✔ Created photo selection and object identification within a taken photo
+                  <br> ✔ Added photo and UI tweens for polish
+                  <br>
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -276,7 +300,12 @@
                 <span class="badge text-bg-main">Godot 4 / GDScript</span>
                 <span class="badge text-bg-programming">Programming</span>
                 <p class="card-text">Home designer sim featuring furniture placement. <br>
-                  <br> ✔ Furniture inventory <br> ✔ Placement along a grid <br> ✔ Selection delete <br> ✔ Undo / redo actions <br> ✔ Mouse position indicator <br> ✔ Player controller <br>
+                  <br> ✔ Created a furniture inventory and GUI 
+                  <br> ✔ Implemented furniture placement on a grid using Godot's GridMap node 
+                  <br> ✔ Programmed a draggable selection box delete, undo and redo actions
+                  <br> ✔ Added a visual position indicator / furniture preview at mouse cursor 
+                  <br> ✔ Programmed first person camera and player controller <br>
+                    ✔ Designed furniture placement particles via GPUParticles3D <br> 
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -301,7 +330,38 @@
                 <span class="badge text-bg-main">Godot 4 / GDScript</span>
                 <span class="badge text-bg-programming">Programming</span>
                 <p class="card-text">Easy to navigate character customization. Full art credit to the original artist. <br>
-                  <br> ✔ Selection and model updating <br> ✔ Model movement shader to simulate movement in static images <br>
+                  <br> ✔ Customization options created and stored using Godot's Resources
+                  <br> ✔ Programmed model update upon item selected 
+                   <br> ✔ Created a model sway shader to simulate movement static images <br>
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
+                    <p>
+                      <i>Source Available Soon!</i>
+                    </p>
+                  </div>
+                  <small>April 2023</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" id="spotlight-3" class="animate__animated animate__delay-4s">
+            <div class="card shadow-sm">
+              <img class="card-img-top static" src="img/w.png" width="100%" height="225">
+              <img class="card-img-top active" src="img/w-2.gif" width="100%" height="225">
+              <div class="card-body">
+                <h4 class="card-text">Wobblie</h4>
+                <span class="badge text-bg-main">Godot 3.5 / GDScript</span>
+                <span class="badge text-bg-programming">Programming</span>
+                <span class="badge text-bg-vfx">VFX</span>
+                <p class="card-text"> Tool where you can draw shakey art with editable parameters. Still in active development. <br>
+                  <br> ✔ Used Line2D to draw lines based on an action button pressed 
+                  event and mouse position
+                  <br> ✔ Wrote a vertex shader that affects line quality, shake speed and 
+                  wobble factor
+                  <br> ✔ Implemented a layer, undo and redo system
+                  <br>
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -320,110 +380,7 @@
     </div>
     </div>
     </div>
-    <hr>
-    <div class="container margin-top-space" id="early-games">
-      <h1 class="text-center">Early Game Projects</h1>
-      <p class="text-center">Games made when I was first starting out game dev! A patchwork of vignettes taken from a strange part of my life.</p>
-    </div>
-    <div class="album py-5">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="card shadow-sm">
-              <a href="https://madsoup-png.itch.io/its-a-giraffe" target=”_blank”>
-                <img class="card-img-top static" src="img/iag.png" width="100%" height="225">
-                <img class="card-img-top active" src="img/iag.gif" width="100%" height="225">
-              </a>
-              <div class="card-body">
-                <h4 class="card-text">It's A Giraffe</h4>
-                <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
-                <span class="badge text-bg-programming">Programming</span>
-                <span class="badge text-bg-art">Art / Animation</span>
-                <p class="card-text"> Silly giraffe evolution game with falling objects. <br>
-                  <br> ✔ Garbage & leaf collection <br> ✔ Giraffe evolution & animations <br> ✔ Ending cutscene <br>
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://madsoup-png.itch.io/its-a-giraffe','_blank')">Play</button>
-                  </div>
-                  <small>January 2019</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <a href="https://madsoup-png.itch.io/insideout" target=”_blank”>
-                <img class="card-img-top static" src="img/io.png" width="100%" height="225">
-                <img class="card-img-top active" src="img/io.gif" width="100%" height="225">
-              </a>
-              <div class="card-body">
-                <h4 class="card-text">Insideout</h4>
-                <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
-                <span class="badge text-bg-programming">Programming</span>
-                <span class="badge text-bg-art">Art / Animation</span>
-                <p class="card-text"> Ambient clicker game peering into the mind of a girl struggling with mental illness. <br>
-                  <br> ✔ Dialogue system w/ choices <br> ✔ Click boost upgrades <br> ✔ Animations <br>
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://madsoup-png.itch.io/insideout','_blank')">Play</button>
-                  </div>
-                  <small>January 2019</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <a href="https://madsoup-png.itch.io/gae" target=”_blank”>
-                <img class="card-img-top static" src="img/hs.png" width="100%" height="225">
-                <img class="card-img-top active" src="img/hs.gif" width="100%" height="225">
-              </a>
-              <div class="card-body">
-                <h4 class="card-text">Hat Stealer</h4>
-                <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
-                <span class="badge text-bg-programming">Programming</span>
-                <span class="badge text-bg-art">Art</span>
-                <p class="card-text"> 2D platformer where you play as a mischevious apple trying to steal the most sought after top hat from the Top Hat Kingdom. <br>
-                  <br> ✔ 2D platforming <br> ✔ Hats with guns that attack you <br>
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://madsoup-png.itch.io/gae','_blank')">Play</button>
-                  </div>
-                  <small>June 2018</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <a href="https://madsoup-png.itch.io/peach-n-love" target=”_blank”>
-                <img class="card-img-top static" src="img/pnl.png" width="100%" height="225">
-                <img class="card-img-top active" src="img/pnl.gif" width="100%" height="225">
-              </a>
-              <div class="card-body">
-                <h4 class="card-text">Peach 'n Love</h4>
-                <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
-                <span class="badge text-bg-programming">Programming</span>
-                <span class="badge text-bg-art">Art / Animation</span>
-                <p class="card-text"> Whacky food speed dating sim with quirky love interests and different endings. <br>
-                  <br> ✔ First ever game jam! <br> ✔ Top down movement <br> ✔ Character animations <br> ✔ Dialogue system <br> ✔ Multiple endings <br>
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://madsoup-png.itch.io/peach-n-love','_blank')">Play</button>
-                  </div>
-                  <small>May 2018</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
+    
     <div class="container">
       <footer class="py-3 my-4">
         <ul class="nav justify-content-center pb-3 mb-3">
@@ -431,13 +388,10 @@
             <a href="#about" class="nav-link px-2 custom-text-colour">About</a>
           </li>
           <li class="nav-item">
-            <a href="#project-spotlight" class="nav-link px-2 custom-text-colour">Project Spotlight</a>
+            <a href="#project-spotlight" class="nav-link px-2 custom-text-colour">Games</a>
           </li>
           <li class="nav-item">
-            <a href="#prototypes" class="nav-link px-2 custom-text-colour">Prototypes</a>
-          </li>
-          <li class="nav-item">
-            <a href="#early-games" class="nav-link px-2 custom-text-colour">Early Games</a>
+            <a href="#prototypes" class="nav-link px-2 custom-text-colour">Learning Projects & Prototypes</a>
           </li>
         </ul>
         <hr>
