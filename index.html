@@ -6,6 +6,7 @@
     <title>Herleen Dualan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
@@ -113,6 +114,34 @@
         width: 40%;
         border-radius: 10%;
       }
+
+      .down-arrow {
+        outline: none;
+        border-radius: 20%;
+      }
+
+      .hero-video {
+        position: relative;
+      }
+
+      .hero-video .down-arrow {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translateX(-50%);
+        object-fit: cover;
+      }
+
+      .down-arrow-icon {
+        color: #eef3f9;
+      }
+
+      .down-arrow-icon:hover {
+        color: black;
+      }
+
     </style>
   </head>
   <body>
@@ -129,7 +158,11 @@
     </nav>
     <div class="hero-video"><video autoplay loop="" muted="" style="margin: auto; position: relative; z-index: -1; left: 50%; transform: translate(-50%, 0%); visibility: visible; opacity: 1; width: 100%; height: 100%;">
         <source src="img/hd_demo_reel_3.mp4" type="video/mp4">
-      </video></div>
+      </video>
+
+        <button type="button" class="down-arrow btn btn-outline-light"><a href="#about" class="btn"><i class="fa-solid fa-angle-down fa-2xl down-arrow-icon"></i></a></button>
+
+    </div>
     <div class="container margin-top-space">
       <!-- <h1 class="text-center" id="about">About</h1> -->
       <div class="grid-container" id="about">
@@ -171,7 +204,7 @@
                   <span class="badge text-bg-audio">Audio</span>
                   <p class="card-text"> Ludum Dare 53 entry made on a team about using a claw to frantically load packages onto a truck. <br>
                     <br> ✔ Programmed claw mechanic using the DampedSpringJoint2D node
-                    <br> ✔ Implemented package lifing / placing logic and box highlighting mechanic
+                    <br> ✔ Implemented package lifing / placing logic and box highlighting mechanic with an outline shader
                     <br> ✔ Created packages, claw, character icons, truck and background sprites via Aseprite
                     <br> ✔ Designed box hitting floor particles using GPUParticles2D
                     <br> ✔ Composed main menu music
