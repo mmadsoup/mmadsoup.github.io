@@ -146,6 +146,13 @@
         color: black;
       }
 
+      .footer-buttons {
+        display: grid;
+        justify-content: center;
+        grid-auto-flow: column;
+        gap: 15px;
+      }
+
     </style>
   </head>
   <body>
@@ -198,10 +205,10 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col" id="spotlight-3" class="animate__animated animate__delay-4s">
               <div class="card shadow-sm">
-                <a href="https://madsoup-png.itch.io/logisticlaw">
+                <!-- <a href="https://madsoup-png.itch.io/logisticlaw"> -->
                   <img class="card-img-top static" src="img/lc.png" width="100%" height="225">
                   <img class="card-img-top active" src="img/lc.gif" width="100%" height="225">
-                </a>
+                <!-- </a> -->
                 <div class="card-body">
                   <h4 class="card-text">Logisticlaw</h4>
                   <span class="badge text-bg-main">Godot 4.0 / GDScript</span>
@@ -229,10 +236,10 @@
             </div>
             <div class="col" id="spotlight-2" class="animate__animated animate__delay-3s">
               <div class="card shadow-sm">
-                <a href="https://kirakiramagic.itch.io/crustacean-camera-caddie" target=”_blank”>
+                <!-- <a href="https://kirakiramagic.itch.io/crustacean-camera-caddie" target=”_blank”> -->
                   <img class="card-img-top static" src="img/ccc.png" width="100%" height="225">
                   <img class="card-img-top active" src="img/ccc-gameplay.gif" width="100%" height="225">
-                </a>
+                <!-- </a> -->
                 <div class="card-body">
                   <h4 class="card-text">Crustacean Camera Caddie</h4>
                   <span class="badge text-bg-main">Godot 4 / GDScript</span>
@@ -261,10 +268,10 @@
 
             <div class="col" id="spotlight-1" class="animate__animated">
               <div class="card shadow-sm">
-                <a href="https://madsoup-png.itch.io/at-the-station" target=”_blank”>
+                <!-- <a href="https://madsoup-png.itch.io/at-the-station" target=”_blank”> -->
                   <img class="card-img-top static" src="img/ats.png" width="100%" height="225">
                   <img class="card-img-top active" src="img/ats.gif" width="100%" height="225">
-                </a>
+                <!-- </a> -->
                 <div class="card-body">
                   <h4 class="card-text">At The Station</h4>
                   <span class="badge text-bg-main">Unity / C#</span>
@@ -438,6 +445,10 @@
         </ul>
         <hr>
         <p class="text-center">© 2023 Herleen Dualan</p>
+        <div class="footer-buttons">
+          <a href="docs/HerleenDualan_Resume.pdf" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i></button></a>
+          <a href="mailto:herleendualan@yahoo.ca"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-envelope fa-sm"></i></button></a>
+        </div>
       </footer>
     </div>
     <script src="script.js"></script>
