@@ -152,14 +152,17 @@
       <div class="container-fluid"><a class="navbar-brand" href="#">Herleen Dualan</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           <!--- <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
-            <li class="nav-item"><a class="nav-link" href="#games">Games</a></li>-->
+            <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tech-demo">Tech Demos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#games">Games</a></li>
           </ul>
         </div>
       </div>
     </nav>
- 
-    <div class="container margin-top-space margin-bottom-space " id="tools">
+    <div class="container margin-top-space" id="tools">
+      <h1 class="text-center">Tools</h1>
+    </div>
+    <div class="container margin-top-space margin-bottom-space ">
       <div class="grid-container">
         <div class="row-1">
           <div class="grid-item">
@@ -270,6 +273,7 @@
             <video autoplay loop="" muted="" class="project-video" >
               <source src="img/ds-cover.mp4"  type="video/mp4">
             </video>
+          
           </div>
         </div>
         <div class="row-1">
@@ -280,23 +284,23 @@
            <h3>Solutions</h3>
             <li><span class="text-bg-vfx"><b>Navigating Graph Elements</b></span> -
               Implemented a solution using runtime scriptable objects for each element, storing their properties with identifiers for proper serialization and deserialization.</li>
-
-            
+              <br><br>
+              <h3>Scripts</h3>
+              <ul>
+                <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEGraphView.cs">Graph View</a>
+                </li>
+                <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DENode.cs">Dialogue Node</a></li>
+                <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEActionNode.cs">Action Node</a></li>
+                <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEGraphViewSaveUtility.cs">Save Utility</a></li>
+                </ul>
+                <a href="https://github.com/mmadsoup/dialogue-editor" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
           </div>
           <div class="grid-item">
            
             <video autoplay loop="" muted="" class="project-video">
               <source src="img/ds-end.mp4"  type="video/mp4">
             </video>
-            <h3>Scripts</h3>
-            <ul>
-              <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEGraphView.cs">Graph View</a>
-              </li>
-              <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DENode.cs">Dialogue Node</a></li>
-              <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEActionNode.cs">Action Node</a></li>
-              <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEGraphViewSaveUtility.cs">Save Utility</a></li>
-              </ul>
-              <a href="https://github.com/mmadsoup/dialogue-editor" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
+            
           </div>
         </div>
        
@@ -355,6 +359,13 @@
             If there were animations, the dropdown was set to play the first index. The remaining animations were dynamically populated in the dropdown.</li>  
           </ol>
 
+          <br><br>
+          <h3>Scripts</h3>
+            <ul>
+              <li><a href="https://github.com/mmadsoup/hitbox-animation-editor/blob/main/Hitboxes/HitboxEditor/Editor/AnimationPreview.cs">Animation Preview</a>
+              </li>
+              </ul>
+              <a href="https://github.com/mmadsoup/hitbox-animation-editor" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
             
           </div>
           <div class="grid-item">
@@ -362,12 +373,7 @@
             <!--<video autoplay loop="" muted="" class="project-video">
               <source src="img/placeholder.mp4"  type="video/mp4">
             </video>-->
-            <h3>Scripts</h3>
-            <ul>
-              <li><a href="https://github.com/mmadsoup/hitbox-animation-editor/blob/main/Hitboxes/HitboxEditor/Editor/AnimationPreview.cs">Animation Preview</a>
-              </li>
-              </ul>
-              <a href="https://github.com/mmadsoup/hitbox-animation-editor" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
+            
           </div>
         </div>
        
@@ -447,9 +453,104 @@
       </div>
     </div>
     <hr>
+
+    <div class="container margin-top-space" id="tech-demo">
+      <h1 class="text-center">Tech Demos</h1>
+    </div>
+    
+    <div class="album py-5">
+      
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <!-- <a href="#" target=”_blank”> -->
+              <!-- <img class="card-img-top static" src="img/rbf.png" width="100%" height="225"> -->
+              <img class="card-img-top active" src="img/rbf.gif" width="100%" height="225">
+              <!-- </a> -->
+              <div class="card-body">
+                <h4 class="card-text">Colourful Filetree Plugin</h4>
+                <span class="badge text-bg-main">Godot 4 / GDScript</span>
+                <span class="badge text-bg-programming">Programming</span>
+                <p class="card-text">Plugin that allows better project organization through colour coordinating your files. <br>
+                  <br> ✔ Programmed colour saving system by writing to the project's editor layout config
+                  <br> ✔ Implemented a popup window with simple GUI on shortcut, utilizing the singleton pattern and signals / events
+                  <br> ✔ Options to add colour, remove a background and erase the colour from the filetree
+                  <br> ✔ Integrated file colouring through a recursive styling system
+                  <br>
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://github.com/mmadsoup/Photo-Selection-Prototype','_blank')">View Source</button> -->
+                    <p>
+                      <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/rainbow-folders','_blank')">Source</button>
+                   </p>
+                  </div>
+                  <small>April 2023</small> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <!-- <a href="#" target=”_blank”> -->
+              <!-- <img class="card-img-top static" src="img/ps.png" width="100%" height="225"> -->
+              <img class="card-img-top active" src="img/ps.gif" width="100%" height="225">
+              <!-- </a> -->
+              <div class="card-body">
+                <h4 class="card-text">Photo Selection</h4>
+                <span class="badge text-bg-main">Godot 4 / GDScript</span>
+                <span class="badge text-bg-programming">Programming</span>
+                <p class="card-text">First person photo taking sim, where you can identify the objects in the photos you take <br>
+                  <br> ✔ Programmed first person camera and player controller
+                  <br> ✔ Implemented photo taking mechanic and album view
+                  <br> ✔ Created photo selection and object identification within a taken photo via raycasting
+                  <br> ✔ Added photo and UI tweens for polish
+                  <br>
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/Photo-Selection-Prototype','_blank')">Source</button>
+                  </div>
+                  <small>April 2023</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col" id="spotlight-3" class="animate__animated animate__delay-4s">
+            <div class="card shadow-sm">
+              <!-- <img class="card-img-top static" src="img/w.png" width="100%" height="225"> -->
+              <img class="card-img-top active" src="img/w-2.gif" width="100%" height="225">
+              <div class="card-body">
+                <h4 class="card-text">Wobblie</h4>
+                <span class="badge text-bg-main">Godot 3.5 / GDScript</span>
+                <span class="badge text-bg-programming">Programming</span>
+                <span class="badge text-bg-vfx">VFX</span>
+                <p class="card-text"> Tool where you can draw shakey art with editable parameters. <br>
+                  <br> ✔ Used Line2D to draw lines based on an action button pressed 
+                  event and mouse position
+                  <br> ✔ Wrote a vertex shader that affects line quality, shake speed and 
+                  wobble factor
+                  <br> ✔ Implemented a layer, undo and redo system (WIP)
+                  <br>
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
+                    <p>
+                      <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/woblie','_blank')">Source</button>
+                    </p>
+                  </div>
+                  <small>April 2023</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     
     <div class="container margin-top-space">
-      <h1 class="text-center" id="project-spotlight">More Projects & Collabs</h1>
+      <h1 class="text-center" id="games">More Projects & Collabs</h1>
       <!-- <p class="text-center">Recent projects I am proud of!</p> -->
     </div>
     <div class="album py-5">
@@ -556,101 +657,6 @@
     </div>
   </div>
   <hr>
-  <div class="container margin-top-space" id="prototypes">
-    <h1 class="text-center">Learning Projects & Prototypes</h1>
-    <p class="text-center">Bite-sized demos made in a few days to a week for research, education and to challenge and expand on new ideas.</p>
-  </div>
-  
-  <div class="album py-5">
-    
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <!-- <a href="#" target=”_blank”> -->
-            <!-- <img class="card-img-top static" src="img/rbf.png" width="100%" height="225"> -->
-            <img class="card-img-top active" src="img/rbf.gif" width="100%" height="225">
-            <!-- </a> -->
-            <div class="card-body">
-              <h4 class="card-text">Colourful Filetree Plugin</h4>
-              <span class="badge text-bg-main">Godot 4 / GDScript</span>
-              <span class="badge text-bg-programming">Programming</span>
-              <p class="card-text">Plugin that allows better project organization through colour coordinating your files. <br>
-                <br> ✔ Programmed colour saving system by writing to the project's editor layout config
-                <br> ✔ Implemented a popup window with simple GUI on shortcut, utilizing the singleton pattern and signals / events
-                <br> ✔ Options to add colour, remove a background and erase the colour from the filetree
-                <br> ✔ Integrated file colouring through a recursive styling system
-                <br>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://github.com/mmadsoup/Photo-Selection-Prototype','_blank')">View Source</button> -->
-                  <p>
-                    <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/rainbow-folders','_blank')">Source</button>
-                 </p>
-                </div>
-                <!-- <small>April 2023</small> -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <!-- <a href="#" target=”_blank”> -->
-            <!-- <img class="card-img-top static" src="img/ps.png" width="100%" height="225"> -->
-            <img class="card-img-top active" src="img/ps.gif" width="100%" height="225">
-            <!-- </a> -->
-            <div class="card-body">
-              <h4 class="card-text">Photo Selection</h4>
-              <span class="badge text-bg-main">Godot 4 / GDScript</span>
-              <span class="badge text-bg-programming">Programming</span>
-              <p class="card-text">First person photo taking sim, where you can identify the objects in the photos you take <br>
-                <br> ✔ Programmed first person camera and player controller
-                <br> ✔ Implemented photo taking mechanic and album view
-                <br> ✔ Created photo selection and object identification within a taken photo via raycasting
-                <br> ✔ Added photo and UI tweens for polish
-                <br>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/Photo-Selection-Prototype','_blank')">Source</button>
-                </div>
-                <!-- <small>April 2023</small> -->
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col" id="spotlight-3" class="animate__animated animate__delay-4s">
-          <div class="card shadow-sm">
-            <!-- <img class="card-img-top static" src="img/w.png" width="100%" height="225"> -->
-            <img class="card-img-top active" src="img/w-2.gif" width="100%" height="225">
-            <div class="card-body">
-              <h4 class="card-text">Wobblie</h4>
-              <span class="badge text-bg-main">Godot 3.5 / GDScript</span>
-              <span class="badge text-bg-programming">Programming</span>
-              <span class="badge text-bg-vfx">VFX</span>
-              <p class="card-text"> Tool where you can draw shakey art with editable parameters. <br>
-                <br> ✔ Used Line2D to draw lines based on an action button pressed 
-                event and mouse position
-                <br> ✔ Wrote a vertex shader that affects line quality, shake speed and 
-                wobble factor
-                <br> ✔ Implemented a layer, undo and redo system (WIP)
-                <br>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
-                  <p>
-                    <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/woblie','_blank')">Source</button>
-                  </p>
-                </div>
-                <!-- <small>April 2023</small> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
      <hr>
       <div class="container margin-top-space" id="hometeam-gamedev">
         <h1 class="text-center">Archives - HomeTeam GameDev Projects</h1>
