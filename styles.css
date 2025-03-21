@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    background-color: #121212;
+}
+
+.card-body {
+    background-color: #121212;
+}
+
+.shadow-sm,
+.card-header {
+    background-color: #1e1e1e;
+    outline-color: #121212;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+small,
+summary,
+.custom-text-colour {
+    color: #eef3f9;
+}
+
+summary {
+    font-size: 1.2em;
+}
+
+hr {
+    color: #626262;
+}
+
+.text-body-secondary {
+    color: #eef3f9;
+}
+
+.margin-top-space {
+    margin-top: 4%;
+}
+
+.margin-bottom-space {
+    margin-bottom: 4%;
+}
+
+.text-bg-main {
+    background-color: #253657;
+}
+
+.text-bg-programming {
+    color: #a69aca;
+}
+
+.text-bg-art {
+    color: #e76d8a;
+}
+
+.text-bg-vfx {
+    color: #f5a1a1;
+}
+
+.text-bg-audio {
+    color: #6f4367;
+}
+
+.hero-video {
+    position: relative;
+}
+
+.footer-buttons {
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+    gap: 15px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    /*background-color: #e6e6e6;*/
+    padding: 20px;
+    /*text-align: center;*/
+}
+
+.row-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+}
+
+.row-1-reverse {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Updated: Reversed column sizes */
+    grid-gap: 10px;
+}
+
+.row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.row-3 {
+    display: grid;
+}
+
+img {
+    border-radius: 2%;
+}
+
+.project-video,
+.project-gif {
+    width: 600px;
+    height: 338px;
+    border-radius: 3%;
+}
+
+img {
+    border-radius: 3%;
+}
+
+ summary::after {
+    content: "Read More...";
+}
+
+
+
+details[open] summary::after {
+    content: "Read Less";
+    color: darkgrey;
+}
