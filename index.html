@@ -315,6 +315,18 @@
             <h1>Animation Previewer <span style="font-size: 60%;">━ <i>Unity / C#</i></span></h1>
             <p>The Animation Previewer Tool was designed to tackle the challenge of previewing animations in relation to an object's hitbox. 
           </p>
+          <br>
+          <h3>Features Implemented</h3>
+          <ul>
+            <li><span class="text-bg-programming"><b>Animation Detection</b></span> - Scans and identifies any object's animations in real-time
+            </li>
+            <li><span class="text-bg-programming"><b>Animation Dropdown</b></span> - Lists animtions in GUI</li>
+            <li><span class="text-bg-programming"><b>Continuous Playback</b></span> -  Animations continue to play even when switching between different sequences</li>
+            <li><span class="text-bg-programming"><b>Playback Controls</b></span> - Play at above or below normal speed to analyze animation relative to hitbox</li>
+            <li><span class="text-bg-programming"><b>Scrubbing through Animation</b></span> - When the animation is paused, you can scrub through the frames!</li>
+            <li><span class="text-bg-programming"><b>Hitbox Resize Gizmo</b></span> - Resize hitboxes to match animation</li>
+            <li><span class="text-bg-programming"><b>Rootmotion Application</b></span> - Syncs the player's local position with the animation's transformation, to line up animation with any placed hitboxes </li>
+          </ul>
           </div>
           <div class="grid-item">
             <video autoplay loop="" muted="" class="project-video">
@@ -325,18 +337,26 @@
         <div class="row-1">
           <div class="grid-item">
             
-            <h3>Features Implemented</h3>
-            <ul>
-              <li><span class="text-bg-programming"><b>Animation Detection</b></span> - Scans and identifies any object's animations in real-time
-              </li>
-              <li><span class="text-bg-programming"><b>Animation Dropdown</b></span> - Lists animtions in GUI</li>
-              <li><span class="text-bg-programming"><b>Continuous Playback</b></span> -  Animations continue to play even when switching between different sequences</li>
-              <li><span class="text-bg-programming"><b>Playback Controls</b></span> - Play at above or below normal speed to analyze animation relative to hitbox</li>
-              <li><span class="text-bg-programming"><b>Scrubbing through Animation</b></span> - When the animation is paused, you can scrub through the frames!</li>
-              <li><span class="text-bg-programming"><b>Hitbox Resize Gizmo</b></span> - Resize hitboxes to match animation</li>
-              <li><span class="text-bg-programming"><b>Rootmotion Application</b></span> - Syncs the player's local position with the animation's transformation, to line up animation with any placed hitboxes </li>
-            </ul>
-
+           
+            <h3>Challenge</h3>
+            <p>One of the challenges I had was figuring out how to get an object's animations when it's selected in the hierarchy.</p>
+            <h3>Solution</h3>
+            <ol>
+             <li><span class="text-bg-vfx"><b>Animator Detection</b></span> -
+             Incorporated a check to see if the selected object had an animator component.</li>
+            <li><span class="text-bg-vfx"><b>Animation Clip Retrieval</b></span> -
+             Once the animator component was confirmed, implement a solution that accessed the animation clips by retrieving the runtimeAnimatorController associated with the object.</li>
+           <li><span class="text-bg-vfx"><b>Animation Clip Retrieval</b></span> -
+             If there were animations, the dropdown was set to play the first index. The remaining animations were dynamically populated in the dropdown.</li>  
+           </ol>
+ 
+           <br><br>
+           <h3>Scripts</h3>
+             <ul>
+               <li><a href="https://github.com/mmadsoup/hitbox-animation-editor/blob/main/Hitboxes/HitboxEditor/Editor/AnimationPreview.cs">Animation Preview</a>
+               </li>
+               </ul>
+               <a href="https://github.com/mmadsoup/hitbox-animation-editor" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
            
           </div>
           <div class="grid-item">
@@ -345,37 +365,7 @@
             </video>
           </div>
         </div>
-        <div class="row-1">
-          <div class="grid-item">
-           <h3>Challenge</h3>
-           <p>One of the challenges I had was figuring out how to get an object's animations when it's selected in the hierarchy.</p>
-           <h3>Solution</h3>
-           <ol>
-            <li><span class="text-bg-vfx"><b>Animator Detection</b></span> -
-            Incorporated a check to see if the selected object had an animator component.</li>
-           <li><span class="text-bg-vfx"><b>Animation Clip Retrieval</b></span> -
-            Once the animator component was confirmed, implement a solution that accessed the animation clips by retrieving the runtimeAnimatorController associated with the object.</li>
-          <li><span class="text-bg-vfx"><b>Animation Clip Retrieval</b></span> -
-            If there were animations, the dropdown was set to play the first index. The remaining animations were dynamically populated in the dropdown.</li>  
-          </ol>
-
-          <br><br>
-          <h3>Scripts</h3>
-            <ul>
-              <li><a href="https://github.com/mmadsoup/hitbox-animation-editor/blob/main/Hitboxes/HitboxEditor/Editor/AnimationPreview.cs">Animation Preview</a>
-              </li>
-              </ul>
-              <a href="https://github.com/mmadsoup/hitbox-animation-editor" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
-            
-          </div>
-          <div class="grid-item">
-           
-            <!--<video autoplay loop="" muted="" class="project-video">
-              <source src="img/placeholder.mp4"  type="video/mp4">
-            </video>-->
-            
-          </div>
-        </div>
+       
        
       </div>
     </div>
@@ -387,6 +377,16 @@
           <div class="grid-item">
             <h1>Image Canvas Resizer <span style="font-size: 60%;">━ <i>WPF / C#</i></span></h1>
             <p>I made this tool to optimize our project's overall footprint, by adjusting image dimensions without changing its quality. A tool for designers when making assets for our project.</p>
+          <br>
+          <h3>Features Implemented</h3>
+            <ul>
+              <li><span class="text-bg-programming"><b>Drag and drop</b></span> -  Load in a single image or an entire folder of images
+              </li>
+              <li><span class="text-bg-programming"><b>File Path Label</b></span> - See where the images are located in the file explorer</li>
+              <li><span class="text-bg-programming"><b>Resizing Options</b></span> - Toggle between power of two or multiple of four dimensions, allowing customization based on specific requirements</li>
+              <li><span class="text-bg-programming"><b>Dimension Comparison Display</b></span> - Single image only; Displays both the original and updated dimensions of the images</li>
+              <li><span class="text-bg-programming"><b>Popup Windows</b></span> - To notify the user when the process is finished</li>
+            </ul>
           </div>
           <div class="grid-item">
             <video autoplay loop="" muted="" class="project-video">
@@ -397,15 +397,12 @@
         <div class="row-1">
           <div class="grid-item">
             
-            <h3>Features Implemented</h3>
+            <h3>Scripts</h3>
             <ul>
-              <li><span class="text-bg-programming"><b>Drag and drop</b></span> -  Load in a single image or an entire folder of images
+              <li><a href="https://github.com/mmadsoup/image-resize-tool/blob/main/MainWindow.xaml.cs">Image Canvas Resizer</a>
               </li>
-              <li><span class="text-bg-programming"><b>File Path Label</b></span> - See where the images are located in the file explorer</li>
-              <li><span class="text-bg-programming"><b>Resizing Options</b></span> - Toggle between power of two or multiple of four dimensions, allowing customization based on specific requirements</li>
-              <li><span class="text-bg-programming"><b>Dimension Comparison Display</b></span> - Single image only; Displays both the original and updated dimensions of the images</li>
-              <li><span class="text-bg-programming"><b>Popup Windows</b></span> - To notify the user when the process is finished</li>
-            </ul>
+              </ul>
+              <a href="https://github.com/mmadsoup/image-resize-tool" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
 
            
           </div>
@@ -414,41 +411,7 @@
               <source src="img/re2.mp4"  type="video/mp4">
             </video>
           </div>
-        </div>
-        <!--div class="row-1">
-          <div class="grid-item">
-            <h3>Challenges</h3>
-            <ol>
-             <li><span class="text-bg-vfx"><b> Learning WPF technology</b></span> -
-              I did not have The initial challenge I encountered was the need to learn and become proficient in Windows Presentation Foundation (WPF) technology, as it was my first time working with it.</li>
-             <li><span class="text-bg-vfx"><b>Image manipulation techniques</b></span> -
-              This task involved learning how to effectively manipulate images, specifically resizing an image's canvas while preserving the original image content.</li>
-             </ol>
-            <h3>Solutions</h3>
-            <ol>
-             <li><span class="text-bg-vfx"><b> Learning WPF technology</b></span> -
-              Extensive research was conducted by studying documentation, reading WPF resources, and watching tutorials. This dedicated effort helped in acquiring a solid understanding of WPF concepts, features, and best practices.</li>
-            <li><span class="text-bg-vfx"><b>Image manipulation techniques</b></span> -
-              In-depth exploration of image manipulation techniques was undertaken. This included understanding resizing calculations, creating a new drawing context, determining the canvas's new dimensions, and copying the original image onto the resized bitmap. By applying these techniques, the desired canvas resizing functionality was achieved in the Image Canvas Resizer tool.</li>
-          
-           </ol>
 
-            
-          </div>
-          <div class="grid-item">
-           
-            <video autoplay loop="" muted="" class="project-video">
-              <source src="img/placeholder.mp4"  type="video/mp4">
-            </video>
-          -->
-            <h3>Scripts</h3>
-            <ul>
-              <li><a href="https://github.com/mmadsoup/image-resize-tool/blob/main/MainWindow.xaml.cs">Image Canvas Resizer</a>
-              </li>
-              </ul>
-              <a href="https://github.com/mmadsoup/image-resize-tool" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
-          </div>
-        </div>
        
       </div>
     </div>
