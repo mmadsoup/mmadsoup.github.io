@@ -12,14 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="nutshell.js"></script>
-    <script>
-      Nutshell.setOptions({
-          startOnLoad: true, // Start Nutshell on load? (default: true)
-          lang: 'en', // Language (default: 'en', which is English)
-          dontEmbedHeadings: false, // If 'true', removes the "embed this as a nutshell" option on headings
-      });
-      </script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
         html {
@@ -54,8 +47,13 @@
         p,
         li,
         small,
+        summary,
         .custom-text-colour {
             color: #eef3f9;
+        }
+
+        summary {
+            font-size: 1.2em;
         }
 
         hr {
@@ -154,6 +152,13 @@
         img {
             border-radius: 3%;
         }
+        summary::after {
+    content: "Read More";
+  }
+        details[open] summary::after {
+    content: "Read Less";
+    color: darkgrey;
+  }
     </style>
 </head>
 
@@ -194,35 +199,7 @@
                         <li><span class="text-bg-programming"><b>Inspector Customization</b></span> - Readable interface for designers</li>
                         <li><span class="text-bg-programming"><b>Dynamic Path Tracking</b></span> - Continuous object movement along the spline</li>
                     </ul>
-
-                </div>
-                <div class="grid-item">
-                    <video autoplay loop="" muted="" class="project-video">
-              <source src="img/spline-cover.mp4"  type="video/mp4">
-            </video>
-                </div>
-            </div>
-            <div class="row-1">
-                <div class="grid-item">
-                    <h3>Challenge</h3>
-                    <p>At first I thought to use bezier curves for this tool. But after some research I found that bezier curve "handles" made creating splines more complicated to use and implement.</p>
-                    <h3>Solution</h3>
-                    <p>
-                        I pieced together a system that uses a combo of Catmull-Rom and Hermite spline calculations. With this, curves are created just by control point position, rather than handle angle or length</p>
-                </div>
-                <div class="grid-item">
-                    <video autoplay loop="" muted="" class="project-video">
-              <source src="img/spline-challenges.mp4"  type="video/mp4">
-            </video>
-                </div>
-            </div>
-            <div class="row-1">
-                <div class="grid-item">
-                    <h3>Collaborative Achievement</h3>
-                    <p>
-                        My <a href="https://www.ijiro.dev" target="_blank">teammate Andy</a> expanded upon this system with advanced features!<br><br>His contributions included branching spline paths, object rotation, and movement through keyboard input
-                        and rigidbody forces.<br><br>I'm massively proud about our work together, and I definitely learned a lot from working wth him!
-                    </p>
+                    <br>
                     <h3>Scripts</h3>
                     <ul>
                         <li><a href="https://github.com/mmadsoup/splines/blob/main/splines/Spline.cs">Spline</a>
@@ -231,631 +208,666 @@
                         <li><a href="https://github.com/mmadsoup/splines/blob/main/splines/Editor/SplineMenuItem.cs">Spline Menu Item </a></li>
                     </ul>
                     <a href="https://github.com/mmadsoup/splines" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
-
                 </div>
                 <div class="grid-item">
-
                     <video autoplay loop="" muted="" class="project-video">
-              <source src="img/spline-solution.mp4"  type="video/mp4">
+              <source src="img/spline-cover.mp4"  type="video/mp4">
             </video>
                 </div>
             </div>
-
-        </div>
-    </div>
-    <hr>
-
-
-    <div class="container margin-top-space margin-bottom-space ">
-        <div class="grid-container">
-            <div class="row-1">
-                <div class="grid-item">
-                    <h1>YarnSpinner Dialogue Editor <span style="font-size: 60%;">━ <i>Unity / C#</i></span></h1>
-                    <p>A node-based dialogue graph extension for <a href="https://yarnspinner.dev"> YarnSpinner</a>!<br><br>What motivated me to build this tool was: Dialogue... Written in a <i>code editor?</i> Too teduious to switch between and hard to
-                        keep track of branching paths in a growing project. I also wanted the writers on our team to get to writing without having to download and learn how to use VSCode!
-
-                    </p>
+            <details>
+                <summary></summary>
+                <div class="row-1">
+                    <div class="grid-item">
+                        <h3>Challenge</h3>
+                        <p>At first I thought to use bezier curves for this tool. But after some research I found that bezier curve "handles" made creating splines more complicated to use and implement.</p>
+                        <h3>Solution</h3>
+                        <p>
+                            I pieced together a system that uses a combo of Catmull-Rom and Hermite spline calculations. With this, curves are created just by control point position, rather than handle angle or length</p>
+                    </div>
+                    <div class="grid-item">
+                        <video autoplay loop="" muted="" class="project-video"><source src="img/spline-challenges.mp4"  type="video/mp4"></video>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <video autoplay loop="" muted="" class="project-video">
+                <div class="row-1">
+                    <div class="grid-item">
+                        <h3>Collaborative Achievement</h3>
+                        <p>
+                            My <a href="https://www.ijiro.dev" target="_blank">teammate Andy</a> expanded upon this system with advanced features!<br><br>His contributions included branching spline paths, object rotation, and movement through keyboard
+                            input and rigidbody forces.<br><br>I'm massively proud about our work together, and I definitely learned a lot from working wth him!
+                        </p>
+                    </div>
+                    <div class="grid-item">
+                        <video autoplay loop="" muted="" class="project-video">
+                  <source src="img/spline-solution.mp4"  type="video/mp4">
+                </video>
+                        </video>
+                    </div>
+
+            </details>
+            </div>
+        </div>
+        <hr>
+
+
+        <div class="container margin-top-space margin-bottom-space ">
+            <div class="grid-container">
+                <div class="row-1">
+                    <div class="grid-item">
+                        <h1>YarnSpinner Dialogue Editor <span style="font-size: 60%;">━ <i>Unity / C#</i></span></h1>
+                        <p>A node-based dialogue graph extension for <a href="https://yarnspinner.dev"> YarnSpinner</a>!<br><br>What motivated me to build this tool was: Dialogue... Written in a <i>code editor?</i> Too teduious to switch between and hard
+                            to keep track of branching paths in a growing project. I also wanted the writers on our team to get to writing without having to download and learn how to use VSCode!
+
+                        </p>
+                    </div>
+                    <div class="grid-item">
+                        <video autoplay loop="" muted="" class="project-video">
               <source src="img/ds-cover.mp4"  type="video/mp4">
             </video>
+                    </div>
                 </div>
-            </div>
-            <div class="row-1">
-                <div class="grid-item">
+                <div class="row-1">
+                    <div class="grid-item">
 
-                    <h3>Features Implemented</h3>
-                    <ul>
-                        <li><span class="text-bg-programming"><b>Unique Identifiers</b></span> - Auto assigns distinct IDs to dialogue elements (files, nodes, and groups)</li>
-                        <li><span class="text-bg-programming"><b>Dialogue Nodes</b></span> - Multi-line text fields for freeform writing</li>
-                        <li><span class="text-bg-programming"><b>Choice Creation</b></span> - Create branching nodes by typing "->" in a text field
-                        </li>
-                        <li><span class="text-bg-programming"><b>Port Drag Node Creation</b></span> - Node creation by dragging on a port to create a new connected node</li>
-                        <li><span class="text-bg-programming"><b>Action Nodes</b></span> - Use yarn commands to envoke yarn-specific code</li>
-                        <li><span class="text-bg-programming"><b>Action Creation</b></span> - Create an action node by typing "///" within a dialogue's text field</li>
-                        <li><span class="text-bg-programming"><b>Node Saving and Loading</b></span> - Scriptable objects to serialize and deserialize nodes, groups and connections</li>
-                        <li><span class="text-bg-programming"><b>Export to Yarn File</b></span> - Exports the graph into a properly formatted yarn file</li>
-                        <li><span class="text-bg-programming"><b>Batch Yarn File Export</b></span> - With the help of node groups, creates multiple dialogues in separate yarn files</li>
-                        <li><span class="text-bg-programming"><b>Graph Settings</b></span> - Can customize colors and dialogue graph syntax</li>
-                    </ul>
+                        <h3>Features Implemented</h3>
+                        <ul>
+                            <li><span class="text-bg-programming"><b>Unique Identifiers</b></span> - Auto assigns distinct IDs to dialogue elements (files, nodes, and groups)</li>
+                            <li><span class="text-bg-programming"><b>Dialogue Nodes</b></span> - Multi-line text fields for freeform writing</li>
+                            <li><span class="text-bg-programming"><b>Choice Creation</b></span> - Create branching nodes by typing "->" in a text field
+                            </li>
+                            <li><span class="text-bg-programming"><b>Port Drag Node Creation</b></span> - Node creation by dragging on a port to create a new connected node</li>
+                            <li><span class="text-bg-programming"><b>Action Nodes</b></span> - Use yarn commands to envoke yarn-specific code</li>
+                            <li><span class="text-bg-programming"><b>Action Creation</b></span> - Create an action node by typing "///" within a dialogue's text field</li>
+                            <li><span class="text-bg-programming"><b>Node Saving and Loading</b></span> - Scriptable objects to serialize and deserialize nodes, groups and connections</li>
+                            <li><span class="text-bg-programming"><b>Export to Yarn File</b></span> - Exports the graph into a properly formatted yarn file</li>
+                            <li><span class="text-bg-programming"><b>Batch Yarn File Export</b></span> - With the help of node groups, creates multiple dialogues in separate yarn files</li>
+                            <li><span class="text-bg-programming"><b>Graph Settings</b></span> - Can customize colors and dialogue graph syntax</li>
+                        </ul>
 
-
-                </div>
-                <div class="grid-item">
-                    <video autoplay loop="" muted="" class="project-video">
+<br>
+<h3>Scripts</h3>
+                        <ul>
+                            <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEGraphView.cs">Graph View</a>
+                            </li>
+                            <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DENode.cs">Dialogue Node</a></li>
+                            <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEActionNode.cs">Action Node</a></li>
+                            <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEGraphViewSaveUtility.cs">Save Utility</a></li>
+                        </ul>
+                        <a href="https://github.com/mmadsoup/dialogue-editor" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
+                    </div>
+                    <div class="grid-item">
+                        <video autoplay loop="" muted="" class="project-video">
               <source src="img/ds-comp.mp4"  type="video/mp4">
             </video>
 
+                    </div>
                 </div>
-            </div>
-            <div class="row-1">
-                <div class="grid-item">
-                    <h3>Challenges</h3>
-                    <li><span class="text-bg-vfx"><b>Navigating Graph Elements</b></span> - Since there were a lot of different connections going on for each node and element, storing the information created a lot of complexity.</li>
-                    <h3>Solutions</h3>
-                    <li><span class="text-bg-vfx"><b>Navigating Graph Elements</b></span> - Implemented a solution using runtime scriptable objects for each element, storing their properties with identifiers for proper serialization and deserialization.</li>
-                    <br><br>
-                    <h3>Scripts</h3>
-                    <ul>
-                        <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEGraphView.cs">Graph View</a>
-                        </li>
-                        <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DENode.cs">Dialogue Node</a></li>
-                        <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEActionNode.cs">Action Node</a></li>
-                        <li><a href="https://github.com/mmadsoup/dialogue-editor/blob/main/DialogueEditor/Editor/DEGraphViewSaveUtility.cs">Save Utility</a></li>
-                    </ul>
-                    <a href="https://github.com/mmadsoup/dialogue-editor" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
-                </div>
-                <div class="grid-item">
+                <details>
+                  <summary></summary>
+                <div class="row-1">
+                    <div class="grid-item">
+                        <h3>Challenges</h3>
+                        <li><span class="text-bg-vfx"><b>Navigating Graph Elements</b></span> - Since there were a lot of different connections going on for each node and element, storing the information created a lot of complexity.</li>
+                        <h3>Solutions</h3>
+                        <li><span class="text-bg-vfx"><b>Navigating Graph Elements</b></span> - Implemented a solution using runtime scriptable objects for each element, storing their properties with identifiers for proper serialization and deserialization.</li>
+                        <br><br>
+                        
+                    </div>
+                    <div class="grid-item">
 
-                    <video autoplay loop="" muted="" class="project-video">
+                        <video autoplay loop="" muted="" class="project-video">
               <source src="img/ds-end.mp4"  type="video/mp4">
             </video>
 
+                    </div>
                 </div>
+              </details>
             </div>
-
         </div>
-    </div>
-    <hr>
+        <hr>
 
-    <div class="container margin-top-space margin-bottom-space ">
-        <div class="grid-container">
-            <div class="row-1">
-                <div class="grid-item">
-                    <h1>Animation Previewer <span style="font-size: 60%;">━ <i>Unity / C#</i></span></h1>
-                    <p>The Animation Previewer Tool was designed to tackle the challenge of previewing animations in relation to an object's hitbox.
-                    </p>
-                    <br>
-                    <h3>Features Implemented</h3>
-                    <ul>
-                        <li><span class="text-bg-programming"><b>Animation Detection</b></span> - Scans and identifies any object's animations in real-time
-                        </li>
-                        <li><span class="text-bg-programming"><b>Animation Dropdown</b></span> - Lists animtions in GUI</li>
-                        <li><span class="text-bg-programming"><b>Continuous Playback</b></span> - Animations continue to play even when switching between different sequences</li>
-                        <li><span class="text-bg-programming"><b>Playback Controls</b></span> - Play at above or below normal speed to analyze animation relative to hitbox</li>
-                        <li><span class="text-bg-programming"><b>Scrubbing through Animation</b></span> - When the animation is paused, you can scrub through the frames!</li>
-                        <li><span class="text-bg-programming"><b>Hitbox Resize Gizmo</b></span> - Resize hitboxes to match animation</li>
-                        <li><span class="text-bg-programming"><b>Rootmotion Application</b></span> - Syncs the player's local position with the animation's transformation, to line up animation with any placed hitboxes </li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <video autoplay loop="" muted="" class="project-video">
+        <div class="container margin-top-space margin-bottom-space ">
+            <div class="grid-container">
+                <div class="row-1">
+                    <div class="grid-item">
+                        <h1>Animation Previewer <span style="font-size: 60%;">━ <i>Unity / C#</i></span></h1>
+                        <p>The Animation Previewer Tool was designed to tackle the challenge of previewing animations in relation to an object's hitbox.
+                        </p>
+                        <br>
+                        <h3>Features Implemented</h3>
+                        <ul>
+                            <li><span class="text-bg-programming"><b>Animation Detection</b></span> - Scans and identifies any object's animations in real-time
+                            </li>
+                            <li><span class="text-bg-programming"><b>Animation Dropdown</b></span> - Lists animtions in GUI</li>
+                            <li><span class="text-bg-programming"><b>Continuous Playback</b></span> - Animations continue to play even when switching between different sequences</li>
+                            <li><span class="text-bg-programming"><b>Playback Controls</b></span> - Play at above or below normal speed to analyze animation relative to hitbox</li>
+                            <li><span class="text-bg-programming"><b>Scrubbing through Animation</b></span> - When the animation is paused, you can scrub through the frames!</li>
+                            <li><span class="text-bg-programming"><b>Hitbox Resize Gizmo</b></span> - Resize hitboxes to match animation</li>
+                            <li><span class="text-bg-programming"><b>Rootmotion Application</b></span> - Syncs the player's local position with the animation's transformation, to line up animation with any placed hitboxes </li>
+                        </ul>
+                        <br>
+                        <h3>Scripts</h3>
+                        <ul>
+                            <li><a href="https://github.com/mmadsoup/hitbox-animation-editor/blob/main/Hitboxes/HitboxEditor/Editor/AnimationPreview.cs">Animation Preview</a>
+                            </li>
+                        </ul>
+                        <a href="https://github.com/mmadsoup/hitbox-animation-editor" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
+
+                    </div>
+                    <div class="grid-item">
+                        <video autoplay loop="" muted="" class="project-video">
               <source src="img/hb3.mp4"  type="video/mp4">
             </video>
+                    </div>
                 </div>
-            </div>
-            <div class="row-1">
-                <div class="grid-item">
+                <details>
+                  <summary></summary>
+                
+                <div class="row-1">
+                    <div class="grid-item">
 
 
-                    <h3>Challenge</h3>
-                    <p>One of the challenges I had was figuring out how to get an object's animations when it's selected in the hierarchy.</p>
-                    <h3>Solution</h3>
-                    <ol>
-                        <li><span class="text-bg-vfx"><b>Animator Detection</b></span> - Incorporated a check to see if the selected object had an animator component.</li>
-                        <li><span class="text-bg-vfx"><b>Animation Clip Retrieval</b></span> - Once the animator component was confirmed, implement a solution that accessed the animation clips by retrieving the runtimeAnimatorController associated with the
-                            object.</li>
-                        <li><span class="text-bg-vfx"><b>Animation Clip Retrieval</b></span> - If there were animations, the dropdown was set to play the first index. The remaining animations were dynamically populated in the dropdown.</li>
-                    </ol>
+                        <h3>Challenge</h3>
+                        <p>One of the challenges I had was figuring out how to get an object's animations when it's selected in the hierarchy.</p>
+                        <h3>Solution</h3>
+                        <ol>
+                            <li><span class="text-bg-vfx"><b>Animator Detection</b></span> - Incorporated a check to see if the selected object had an animator component.</li>
+                            <li><span class="text-bg-vfx"><b>Animation Clip Retrieval</b></span> - Once the animator component was confirmed, implement a solution that accessed the animation clips by retrieving the runtimeAnimatorController associated with
+                                the object.
+                            </li>
+                            <li><span class="text-bg-vfx"><b>Animation Clip Retrieval</b></span> - If there were animations, the dropdown was set to play the first index. The remaining animations were dynamically populated in the dropdown.</li>
+                        </ol>
 
-                    <br><br>
-                    <h3>Scripts</h3>
-                    <ul>
-                        <li><a href="https://github.com/mmadsoup/hitbox-animation-editor/blob/main/Hitboxes/HitboxEditor/Editor/AnimationPreview.cs">Animation Preview</a>
-                        </li>
-                    </ul>
-                    <a href="https://github.com/mmadsoup/hitbox-animation-editor" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
-
+                        <br><br>
+                        
+                    </div>
+                    <div class="grid-item">
+                        <video autoplay loop="" muted="" class="project-video"><source src="img/hb2.mp4"  type="video/mp4"></video>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <video autoplay loop="" muted="" class="project-video">
-              <source src="img/hb2.mp4"  type="video/mp4">
-            </video>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    <hr>
-
-    <div class="container margin-top-space margin-bottom-space ">
-        <div class="grid-container">
-            <div class="row-1">
-                <div class="grid-item">
-                    <h1>Image Canvas Resizer <span style="font-size: 60%;">━ <i>WPF / C#</i></span></h1>
-                    <p>I made this tool to optimize our project's overall footprint, by adjusting image dimensions without changing its quality. A tool for designers when making assets for our project.</p>
-                    <br>
-                    <h3>Features Implemented</h3>
-                    <ul>
-                        <li><span class="text-bg-programming"><b>Drag and drop</b></span> - Load in a single image or an entire folder of images
-                        </li>
-                        <li><span class="text-bg-programming"><b>File Path Label</b></span> - See where the images are located in the file explorer</li>
-                        <li><span class="text-bg-programming"><b>Resizing Options</b></span> - Toggle between power of two or multiple of four dimensions, allowing customization based on specific requirements</li>
-                        <li><span class="text-bg-programming"><b>Dimension Comparison Display</b></span> - Single image only; Displays both the original and updated dimensions of the images</li>
-                        <li><span class="text-bg-programming"><b>Popup Windows</b></span> - To notify the user when the process is finished</li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <video autoplay loop="" muted="" class="project-video">
-              <source src="img/re1.mp4"  type="video/mp4">
-            </video>
-                </div>
-            </div>
-            <div class="row-1">
-                <div class="grid-item">
-
-                    <h3>Scripts</h3>
-                    <ul>
-                        <li><a href="https://github.com/mmadsoup/image-resize-tool/blob/main/MainWindow.xaml.cs">Image Canvas Resizer</a>
-                        </li>
-                    </ul>
-                    <a href="https://github.com/mmadsoup/image-resize-tool" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
-
-
-                </div>
-                <div class="grid-item">
-                    <video autoplay loop="" muted="" class="project-video">
-              <source src="img/re2.mp4"  type="video/mp4">
-            </video>
-                </div>
-
+              </details>
 
             </div>
         </div>
         <hr>
 
-        <div class="container margin-top-space" id="tech-demo">
-            <h1 class="text-center">- Tech Demos -</h1>
-        </div>
-
-        <div class="album py-5">
-
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <!-- <a href="#" target=”_blank”> -->
-                            <!-- <img class="card-img-top static" src="img/rbf.png" width="100%" height="225"> -->
-                            <img class="card-img-top active" src="img/rbf.gif" width="100%" height="225">
-                            <!-- </a> -->
-                            <div class="card-body">
-                                <h4 class="card-text">Colourful Filetree Plugin</h4>
-                                <span class="badge text-bg-main">Godot 4 / GDScript</span>
-                                <span class="badge text-bg-programming">Programming</span>
-                                <p class="card-text">Plugin that allows better project organization through colour coordinating your files. <br>
-                                    <br> ✔ Programmed colour saving system by writing to the project's editor layout config
-                                    <br> ✔ Implemented a popup window with simple GUI on shortcut, utilizing the singleton pattern and signals / events
-                                    <br> ✔ Options to add colour, remove a background and erase the colour from the filetree
-                                    <br> ✔ Integrated file colouring through a recursive styling system
-                                    <br>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://github.com/mmadsoup/Photo-Selection-Prototype','_blank')">View Source</button> -->
-                                        <p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/rainbow-folders','_blank')">Source</button>
-                                        </p>
-                                    </div>
-                                    <small>April 2023</small>
-                                </div>
-                            </div>
-                        </div>
+        <div class="container margin-top-space margin-bottom-space ">
+            <div class="grid-container">
+                <div class="row-1">
+                    <div class="grid-item">
+                        <h1>Image Canvas Resizer <span style="font-size: 60%;">━ <i>WPF / C#</i></span></h1>
+                        <p>I made this tool to optimize our project's overall footprint, by adjusting image dimensions without changing its quality. A tool for designers when making assets for our project.</p>
+                        <br>
+                        <h3>Features Implemented</h3>
+                        <ul>
+                            <li><span class="text-bg-programming"><b>Drag and drop</b></span> - Load in a single image or an entire folder of images
+                            </li>
+                            <li><span class="text-bg-programming"><b>File Path Label</b></span> - See where the images are located in the file explorer</li>
+                            <li><span class="text-bg-programming"><b>Resizing Options</b></span> - Toggle between power of two or multiple of four dimensions, allowing customization based on specific requirements</li>
+                            <li><span class="text-bg-programming"><b>Dimension Comparison Display</b></span> - Single image only; Displays both the original and updated dimensions of the images</li>
+                            <li><span class="text-bg-programming"><b>Popup Windows</b></span> - To notify the user when the process is finished</li>
+                        </ul>
                     </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <!-- <a href="#" target=”_blank”> -->
-                            <!-- <img class="card-img-top static" src="img/ps.png" width="100%" height="225"> -->
-                            <img class="card-img-top active" src="img/ps.gif" width="100%" height="225">
-                            <!-- </a> -->
-                            <div class="card-body">
-                                <h4 class="card-text">Photo Selection</h4>
-                                <span class="badge text-bg-main">Godot 4 / GDScript</span>
-                                <span class="badge text-bg-programming">Programming</span>
-                                <p class="card-text">First person photo taking sim, where you can identify the objects in the photos you take <br>
-                                    <br> ✔ Programmed first person camera and player controller
-                                    <br> ✔ Implemented photo taking mechanic and album view
-                                    <br> ✔ Created photo selection and object identification within a taken photo via raycasting
-                                    <br> ✔ Added photo and UI tweens for polish
-                                    <br>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/Photo-Selection-Prototype','_blank')">Source</button>
-                                    </div>
-                                    <small>April 2023</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col" id="spotlight-3" class="animate__animated animate__delay-4s">
-                        <div class="card shadow-sm">
-                            <!-- <img class="card-img-top static" src="img/w.png" width="100%" height="225"> -->
-                            <img class="card-img-top active" src="img/w-2.gif" width="100%" height="225">
-                            <div class="card-body">
-                                <h4 class="card-text">Wobblie</h4>
-                                <span class="badge text-bg-main">Godot 3.5 / GDScript</span>
-                                <span class="badge text-bg-programming">Programming</span>
-                                <span class="badge text-bg-vfx">VFX</span>
-                                <p class="card-text"> Tool where you can draw shakey art with editable parameters. <br>
-                                    <br> ✔ Used Line2D to draw lines based on an action button pressed event and mouse position
-                                    <br> ✔ Wrote a vertex shader that affects line quality, shake speed and wobble factor
-                                    <br> ✔ Implemented a layer, undo and redo system (WIP)
-                                    <br>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
-                                        <p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/woblie','_blank')">Source</button>
-                                        </p>
-                                    </div>
-                                    <small>April 2023</small>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="grid-item">
+                        <video autoplay loop="" muted="" class="project-video">
+              <source src="img/re1.mp4"  type="video/mp4">
+            </video>
                     </div>
                 </div>
+                <div class="row-1">
+                    <div class="grid-item">
 
-                <div class="container margin-top-space">
-                    <h1 class="text-center" id="games">- Games -</h1>
-                    <!-- <p class="text-center">Recent projects I am proud of!</p> -->
-                </div>
-                <div class="album py-5">
-                    <div class="container">
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                            <div class="col" id="spotlight-3" class="animate__animated animate__delay-4s">
-                                <div class="card shadow-sm">
-                                    <!-- <a href="https://madsoup-png.itch.io/logisticlaw"> -->
-                                    <!-- <img class="card-img-top static" src="img/lc.png" width="100%" height="225"> -->
-                                    <img class="card-img-top active" src="img/lc.gif" width="100%" height="225">
-                                    <!-- </a> -->
-                                    <div class="card-body">
-                                        <h4 class="card-text">Logisticlaw</h4>
-                                        <span class="badge text-bg-main">Godot 4.0 / GDScript</span>
-                                        <span class="badge text-bg-programming">Programming</span>
-                                        <span class="badge text-bg-art">Art</span>
-                                        <span class="badge text-bg-vfx">VFX</span>
-                                        <span class="badge text-bg-audio">Audio</span>
-                                        <p class="card-text"> Ludum Dare 53 entry made on a team about using a claw to frantically load packages onto a truck. <br>
-                                            <br> ✔ Used the global signal bus pattern for particle effects, box sound effect integration and portrait changes
-                                            <br> ✔ Programmed claw mechanic using the DampedSpringJoint2D node
-                                            <br> ✔ Implemented package lifing / placing logic and box highlighting mechanic with an outline shader
-                                            <br> ✔ Created packages, claw, character icons, truck and background sprites with Aseprite
-                                            <br> ✔ Designed box hitting floor particles using GPUParticles2D
-                                            <br> ✔ Composed main menu music
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group">
-                                                <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
-                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://madsoup-png.itch.io/logisticlaw','_blank')">Play</button>
-                                            </div>
-                                            <small>April 2023</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col" id="spotlight-2" class="animate__animated animate__delay-3s">
-                                <div class="card shadow-sm">
-                                    <!-- <a href="https://kirakiramagic.itch.io/crustacean-camera-caddie" target=”_blank”> -->
-                                    <!-- <img class="card-img-top static" src="img/ccc.png" width="100%" height="225"> -->
-                                    <img class="card-img-top active" src="img/ccc-gameplay.gif" width="100%" height="225">
-                                    <!-- </a> -->
-                                    <div class="card-body">
-                                        <h4 class="card-text">Crustacean Camera Caddie</h4>
-                                        <span class="badge text-bg-main">Godot 4 / GDScript</span>
-                                        <span class="badge text-bg-programming">Programming</span>
-                                        <span class="badge text-bg-vfx">VFX</span>
-                                        <p class="card-text">Collaborative project made within one week about using a camera on a golf ball to take pictures of a giant crab kaiju. <br>
-                                            <br> ✔ Programmed camera movement and photo quest system<br> ✔ Wrote an in editor tool to randomize city layouts using GridMaps
-                                            <br> ✔ Designed kaiju explosion VFX with GPUParticles3D and Visual Shaders <br> ✔ Prototyped ball behaviour by implementing projectile motion based on target location <br> ✔ Conceptualized main menu art
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open('https://kirakiramagic.itch.io/crustacean-camera-caddie','_blank')">Play</button>
-                                                <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
-                                            </div>
-                                            <small>April 2023</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <h3>Scripts</h3>
+                        <ul>
+                            <li><a href="https://github.com/mmadsoup/image-resize-tool/blob/main/MainWindow.xaml.cs">Image Canvas Resizer</a>
+                            </li>
+                        </ul>
+                        <a href="https://github.com/mmadsoup/image-resize-tool" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i> | Github Repo</button></a>
 
-                            <div class="col" id="spotlight-1" class="animate__animated">
-                                <div class="card shadow-sm">
-                                    <!-- <a href="https://madsoup-png.itch.io/at-the-station" target=”_blank”> -->
-                                    <!-- <img class="card-img-top static" src="img/ats.png" width="100%" height="225"> -->
-                                    <img class="card-img-top active" src="img/ats.gif" width="100%" height="225">
-                                    <!-- </a> -->
-                                    <div class="card-body">
-                                        <h4 class="card-text">At The Station</h4>
-                                        <span class="badge text-bg-main">Unity / C#</span>
-                                        <span class="badge text-bg-programming">Programming</span>
-                                        <span class="badge text-bg-vfx">VFX</span>
-                                        <span class="badge text-bg-art">Art / Animation</span>
-                                        <p class="card-text">One week long game jam about meeting a strange dog at a station. <br>
-                                            <br> ✔ Programmed 2D platforming, dialogue and interaction system
-                                            <br> ✔ Directed and implemented cutscenes with Unity Timeline
-                                            <br> ✔ Designed dust (air), dust trail and cherry blossom particle effects with Unity's Particle System <br> ✔ Polished game visuals via Post Processing Effects with URP <br> ✔ Created pixel art assets and animations
-                                            with Aseprite <br>
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open('https://madsoup-png.itch.io/at-the-station','_blank')">Play</button>
-                                                <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
-                                            </div>
-                                            <small>October 2022</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
-                </div>
+                    <!--<div class="grid-item">
+                        <video autoplay loop="" muted="" class="project-video">
+              <source src="img/re2.mp4"  type="video/mp4">
+            </video>
+                  
+
+
+                </div>-->
             </div>
             <hr>
-            <hr>
-            <div class="container margin-top-space" id="hometeam-gamedev">
-                <h3 class="text-center">Archives - HomeTeam GameDev Projects</h3>
-                <p class="text-center">Projects made when I was a part of the club <a href="https://hometeamgamedev.com/">HomeTeam GameDev</a>, formerly Gamkedo.</p>
+
+            <div class="container margin-top-space" id="tech-demo">
+                <h1 class="text-center">- Tech Demos -</h1>
             </div>
+
             <div class="album py-5">
+
                 <div class="container">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                         <div class="col">
                             <div class="card shadow-sm">
-                                <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?game_id=372152" target=”_blank”>
-                     <img class="card-img-top active" src="img/wr.gif" width="100%" height="225">
-                     </a>
+                                <!-- <a href="#" target=”_blank”> -->
+                                <!-- <img class="card-img-top static" src="img/rbf.png" width="100%" height="225"> -->
+                                <img class="card-img-top active" src="img/rbf.gif" width="100%" height="225">
+                                <!-- </a> -->
                                 <div class="card-body">
-                                    <h4 class="card-text">Warped Radar</h4>
-                                    <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
+                                    <h4 class="card-text">Colourful Filetree Plugin</h4>
+                                    <span class="badge text-bg-main">Godot 4 / GDScript</span>
                                     <span class="badge text-bg-programming">Programming</span>
-                                    <span class="badge text-bg-art">Art / Animation</span>
-                                    <p class="card-text">
-                                        Top-down cyberpunk crime mystery, uncover the mysteries of Ohm with the protagonist, John.<br>
-                                        <br> ✔ Prototype & core game mechanics <br> ✔ Dialogue system w/ choices <br> ✔ John & Rose portraits <br>
+                                    <p class="card-text">Plugin that allows better project organization through colour coordinating your files. <br>
+                                        <br> ✔ Programmed colour saving system by writing to the project's editor layout config
+                                        <br> ✔ Implemented a popup window with simple GUI on shortcut, utilizing the singleton pattern and signals / events
+                                        <br> ✔ Options to add colour, remove a background and erase the colour from the filetree
+                                        <br> ✔ Integrated file colouring through a recursive styling system
+                                        <br>
                                     </p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://hometeamgamedev.itch.io/warped-radar','_blank')">Play</button>
+                                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" window.open('https://github.com/mmadsoup/Photo-Selection-Prototype','_blank')">View Source</button> -->
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/rainbow-folders','_blank')">Source</button>
+                                            </p>
                                         </div>
-                                        <small>February 2019</small>
+                                        <small>April 2023</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card shadow-sm">
-                                <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?game_id=322283" target=”_blank”>
-                     <img class="card-img-top active" src="img/cc.gif" width="100%" height="225">
-                     </a>
+                                <!-- <a href="#" target=”_blank”> -->
+                                <!-- <img class="card-img-top static" src="img/ps.png" width="100%" height="225"> -->
+                                <img class="card-img-top active" src="img/ps.gif" width="100%" height="225">
+                                <!-- </a> -->
                                 <div class="card-body">
-                                    <h4 class="card-text">Chop Chop, Chop-Chop!</h4>
-                                    <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
+                                    <h4 class="card-text">Photo Selection</h4>
+                                    <span class="badge text-bg-main">Godot 4 / GDScript</span>
                                     <span class="badge text-bg-programming">Programming</span>
-                                    <span class="badge text-bg-art">Art</span>
-                                    <p class="card-text">
-                                        Relaxing 1-bit style tree chopping simulator.<br>
-                                        <br> ✔ Floating speech bubbles <br> ✔ Tree art <br>
+                                    <p class="card-text">First person photo taking sim, where you can identify the objects in the photos you take <br>
+                                        <br> ✔ Programmed first person camera and player controller
+                                        <br> ✔ Implemented photo taking mechanic and album view
+                                        <br> ✔ Created photo selection and object identification within a taken photo via raycasting
+                                        <br> ✔ Added photo and UI tweens for polish
+                                        <br>
                                     </p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/gamkedo-la/chop-chop-chop-chop','_blank')">Source</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/Photo-Selection-Prototype','_blank')">Source</button>
                                         </div>
-                                        <small>October 2018</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?position=6" target=”_blank”>
-                     <img class="card-img-top active" src="img/dr.gif" width="100%" height="225">
-                     </a>
-                                <div class="card-body">
-                                    <h4 class="card-text">Death Road to McGamkedonald's</h4>
-                                    <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
-                                    <span class="badge text-bg-programming">Programming</span>
-                                    <span class="badge text-bg-art">Art</span>
-                                    <p class="card-text">
-                                        Immersive cyberpunk crime mystery following the blue guy John.<br>
-                                        <br> ✔ Pong mechanics <br> ✔ Meat & veggie sprites <br> ✔ Kitchen BG <br>
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://oneseedfruit.itch.io/death-road-to-mcgamkedonalds','_blank')">Play</button>
-                                        </div>
-                                        <small>April 2018</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?position=5" target=”_blank”>
-                     <img class="card-img-top active" src="img/pg.gif" width="100%" height="225">
-                     </a>
-                                <div class="card-body">
-                                    <h4 class="card-text">Playground Legends</h4>
-                                    <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
-                                    <span class="badge text-bg-programming">Programming</span>
-                                    <span class="badge text-bg-art">Art / Animation</span>
-                                    <span class="badge text-bg-audio">Audio</span>
-                                    <p class="card-text"> <br> ✔ SFX integration <br> ✔ Ball SFX <br> ✔ Player jump, catch & throw animations <br>
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://hometeamgamedev.itch.io/playground-legends','_blank')">Play</button>
-                                        </div>
-                                        <small>April 2018</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?position=4" target=”_blank”>
-                     <img class="card-img-top active" src="img/gint.gif" width="100%" height="225">
-                     </a>
-                                <div class="card-body">
-                                    <h4 class="card-text">Ghosts in Neo Tokyo</h4>
-                                    <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
-                                    <span class="badge text-bg-programming">Programming</span>
-                                    <span class="badge text-bg-art">Art</span>
-                                    <span class="badge text-bg-audio">Audio</span>
-                                    <p class="card-text"><br> ✔ Wall jump <br> ✔ Character portraits (GrampGhost, Avocado Ghost, Boss 1-3, Baron) <br> ✔ Airconditioner, brick & sign sprites <br>
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://hometeamgamedev.itch.io/ghosts-of-neo-tokyo','_blank')">Play</button>
-                                        </div>
-                                        <small>April 2018</small>
+                                        <small>April 2023</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col">
+                        <div class="col" id="spotlight-3" class="animate__animated animate__delay-4s">
                             <div class="card shadow-sm">
-                                <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?position=2" target=”_blank”>
+                                <!-- <img class="card-img-top static" src="img/w.png" width="100%" height="225"> -->
+                                <img class="card-img-top active" src="img/w-2.gif" width="100%" height="225">
+                                <div class="card-body">
+                                    <h4 class="card-text">Wobblie</h4>
+                                    <span class="badge text-bg-main">Godot 3.5 / GDScript</span>
+                                    <span class="badge text-bg-programming">Programming</span>
+                                    <span class="badge text-bg-vfx">VFX</span>
+                                    <p class="card-text"> Tool where you can draw shakey art with editable parameters. <br>
+                                        <br> ✔ Used Line2D to draw lines based on an action button pressed event and mouse position
+                                        <br> ✔ Wrote a vertex shader that affects line quality, shake speed and wobble factor
+                                        <br> ✔ Implemented a layer, undo and redo system (WIP)
+                                        <br>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/mmadsoup/woblie','_blank')">Source</button>
+                                            </p>
+                                        </div>
+                                        <small>April 2023</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container margin-top-space">
+                        <h1 class="text-center" id="games">- Games -</h1>
+                        <!-- <p class="text-center">Recent projects I am proud of!</p> -->
+                    </div>
+                    <div class="album py-5">
+                        <div class="container">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                <div class="col" id="spotlight-3" class="animate__animated animate__delay-4s">
+                                    <div class="card shadow-sm">
+                                        <!-- <a href="https://madsoup-png.itch.io/logisticlaw"> -->
+                                        <!-- <img class="card-img-top static" src="img/lc.png" width="100%" height="225"> -->
+                                        <img class="card-img-top active" src="img/lc.gif" width="100%" height="225">
+                                        <!-- </a> -->
+                                        <div class="card-body">
+                                            <h4 class="card-text">Logisticlaw</h4>
+                                            <span class="badge text-bg-main">Godot 4.0 / GDScript</span>
+                                            <span class="badge text-bg-programming">Programming</span>
+                                            <span class="badge text-bg-art">Art</span>
+                                            <span class="badge text-bg-vfx">VFX</span>
+                                            <span class="badge text-bg-audio">Audio</span>
+                                            <p class="card-text"> Ludum Dare 53 entry made on a team about using a claw to frantically load packages onto a truck. <br>
+                                                <br> ✔ Used the global signal bus pattern for particle effects, box sound effect integration and portrait changes
+                                                <br> ✔ Programmed claw mechanic using the DampedSpringJoint2D node
+                                                <br> ✔ Implemented package lifing / placing logic and box highlighting mechanic with an outline shader
+                                                <br> ✔ Created packages, claw, character icons, truck and background sprites with Aseprite
+                                                <br> ✔ Designed box hitting floor particles using GPUParticles2D
+                                                <br> ✔ Composed main menu music
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://madsoup-png.itch.io/logisticlaw','_blank')">Play</button>
+                                                </div>
+                                                <small>April 2023</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col" id="spotlight-2" class="animate__animated animate__delay-3s">
+                                    <div class="card shadow-sm">
+                                        <!-- <a href="https://kirakiramagic.itch.io/crustacean-camera-caddie" target=”_blank”> -->
+                                        <!-- <img class="card-img-top static" src="img/ccc.png" width="100%" height="225"> -->
+                                        <img class="card-img-top active" src="img/ccc-gameplay.gif" width="100%" height="225">
+                                        <!-- </a> -->
+                                        <div class="card-body">
+                                            <h4 class="card-text">Crustacean Camera Caddie</h4>
+                                            <span class="badge text-bg-main">Godot 4 / GDScript</span>
+                                            <span class="badge text-bg-programming">Programming</span>
+                                            <span class="badge text-bg-vfx">VFX</span>
+                                            <p class="card-text">Collaborative project made within one week about using a camera on a golf ball to take pictures of a giant crab kaiju. <br>
+                                                <br> ✔ Programmed camera movement and photo quest system<br> ✔ Wrote an in editor tool to randomize city layouts using GridMaps
+                                                <br> ✔ Designed kaiju explosion VFX with GPUParticles3D and Visual Shaders <br> ✔ Prototyped ball behaviour by implementing projectile motion based on target location <br> ✔ Conceptualized main menu art
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open('https://kirakiramagic.itch.io/crustacean-camera-caddie','_blank')">Play</button>
+                                                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
+                                                </div>
+                                                <small>April 2023</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col" id="spotlight-1" class="animate__animated">
+                                    <div class="card shadow-sm">
+                                        <!-- <a href="https://madsoup-png.itch.io/at-the-station" target=”_blank”> -->
+                                        <!-- <img class="card-img-top static" src="img/ats.png" width="100%" height="225"> -->
+                                        <img class="card-img-top active" src="img/ats.gif" width="100%" height="225">
+                                        <!-- </a> -->
+                                        <div class="card-body">
+                                            <h4 class="card-text">At The Station</h4>
+                                            <span class="badge text-bg-main">Unity / C#</span>
+                                            <span class="badge text-bg-programming">Programming</span>
+                                            <span class="badge text-bg-vfx">VFX</span>
+                                            <span class="badge text-bg-art">Art / Animation</span>
+                                            <p class="card-text">One week long game jam about meeting a strange dog at a station. <br>
+                                                <br> ✔ Programmed 2D platforming, dialogue and interaction system
+                                                <br> ✔ Directed and implemented cutscenes with Unity Timeline
+                                                <br> ✔ Designed dust (air), dust trail and cherry blossom particle effects with Unity's Particle System <br> ✔ Polished game visuals via Post Processing Effects with URP <br> ✔ Created pixel art assets and
+                                                animations with Aseprite <br>
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open('https://madsoup-png.itch.io/at-the-station','_blank')">Play</button>
+                                                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Source</button> -->
+                                                </div>
+                                                <small>October 2022</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <hr>
+                <div class="container margin-top-space" id="hometeam-gamedev">
+                    <h3 class="text-center">Archives - HomeTeam GameDev Projects</h3>
+                    <p class="text-center">Projects made when I was a part of the club <a href="https://hometeamgamedev.com/">HomeTeam GameDev</a>, formerly Gamkedo.</p>
+                </div>
+                <div class="album py-5">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?game_id=372152" target=”_blank”>
+                     <img class="card-img-top active" src="img/wr.gif" width="100%" height="225">
+                     </a>
+                                    <div class="card-body">
+                                        <h4 class="card-text">Warped Radar</h4>
+                                        <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
+                                        <span class="badge text-bg-programming">Programming</span>
+                                        <span class="badge text-bg-art">Art / Animation</span>
+                                        <p class="card-text">
+                                            Top-down cyberpunk crime mystery, uncover the mysteries of Ohm with the protagonist, John.<br>
+                                            <br> ✔ Prototype & core game mechanics <br> ✔ Dialogue system w/ choices <br> ✔ John & Rose portraits <br>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://hometeamgamedev.itch.io/warped-radar','_blank')">Play</button>
+                                            </div>
+                                            <small>February 2019</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?game_id=322283" target=”_blank”>
+                     <img class="card-img-top active" src="img/cc.gif" width="100%" height="225">
+                     </a>
+                                    <div class="card-body">
+                                        <h4 class="card-text">Chop Chop, Chop-Chop!</h4>
+                                        <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
+                                        <span class="badge text-bg-programming">Programming</span>
+                                        <span class="badge text-bg-art">Art</span>
+                                        <p class="card-text">
+                                            Relaxing 1-bit style tree chopping simulator.<br>
+                                            <br> ✔ Floating speech bubbles <br> ✔ Tree art <br>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://github.com/gamkedo-la/chop-chop-chop-chop','_blank')">Source</button>
+                                            </div>
+                                            <small>October 2018</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?position=6" target=”_blank”>
+                     <img class="card-img-top active" src="img/dr.gif" width="100%" height="225">
+                     </a>
+                                    <div class="card-body">
+                                        <h4 class="card-text">Death Road to McGamkedonald's</h4>
+                                        <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
+                                        <span class="badge text-bg-programming">Programming</span>
+                                        <span class="badge text-bg-art">Art</span>
+                                        <p class="card-text">
+                                            Immersive cyberpunk crime mystery following the blue guy John.<br>
+                                            <br> ✔ Pong mechanics <br> ✔ Meat & veggie sprites <br> ✔ Kitchen BG <br>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://oneseedfruit.itch.io/death-road-to-mcgamkedonalds','_blank')">Play</button>
+                                            </div>
+                                            <small>April 2018</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?position=5" target=”_blank”>
+                     <img class="card-img-top active" src="img/pg.gif" width="100%" height="225">
+                     </a>
+                                    <div class="card-body">
+                                        <h4 class="card-text">Playground Legends</h4>
+                                        <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
+                                        <span class="badge text-bg-programming">Programming</span>
+                                        <span class="badge text-bg-art">Art / Animation</span>
+                                        <span class="badge text-bg-audio">Audio</span>
+                                        <p class="card-text"> <br> ✔ SFX integration <br> ✔ Ball SFX <br> ✔ Player jump, catch & throw animations <br>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://hometeamgamedev.itch.io/playground-legends','_blank')">Play</button>
+                                            </div>
+                                            <small>April 2018</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?position=4" target=”_blank”>
+                     <img class="card-img-top active" src="img/gint.gif" width="100%" height="225">
+                     </a>
+                                    <div class="card-body">
+                                        <h4 class="card-text">Ghosts in Neo Tokyo</h4>
+                                        <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
+                                        <span class="badge text-bg-programming">Programming</span>
+                                        <span class="badge text-bg-art">Art</span>
+                                        <span class="badge text-bg-audio">Audio</span>
+                                        <p class="card-text"><br> ✔ Wall jump <br> ✔ Character portraits (GrampGhost, Avocado Ghost, Boss 1-3, Baron) <br> ✔ Airconditioner, brick & sign sprites <br>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://hometeamgamedev.itch.io/ghosts-of-neo-tokyo','_blank')">Play</button>
+                                            </div>
+                                            <small>April 2018</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <a href="https://itch.io/queue/c/297002/games-i-was-a-part-of?position=2" target=”_blank”>
                      <img class="card-img-top active" src="img/e.gif" width="100%" height="225">
                      </a>
-                                <div class="card-body">
-                                    <h4 class="card-text">Excalibur SDS</h4>
-                                    <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
-                                    <span class="badge text-bg-programming">Programming</span>
-                                    <span class="badge text-bg-audio">Audio</span>
-                                    <p class="card-text"><br> ✔ Lives GUI <br> ✔ Bomb flash <br> ✔ Scene skipping <br> ✔ Pause functionalty & game tint <br> ✔ Game over BGM <br> ✔ Pause / play SFX <br>
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://hometeamgamedev.itch.io/excalibur-sds','_blank')">Play</button>
+                                    <div class="card-body">
+                                        <h4 class="card-text">Excalibur SDS</h4>
+                                        <span class="badge text-bg-main">Javascript / HTML5 Canvas</span>
+                                        <span class="badge text-bg-programming">Programming</span>
+                                        <span class="badge text-bg-audio">Audio</span>
+                                        <p class="card-text"><br> ✔ Lives GUI <br> ✔ Bomb flash <br> ✔ Scene skipping <br> ✔ Pause functionalty & game tint <br> ✔ Game over BGM <br> ✔ Pause / play SFX <br>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://hometeamgamedev.itch.io/excalibur-sds','_blank')">Play</button>
+                                            </div>
+                                            <small>November 2017</small>
                                         </div>
-                                        <small>November 2017</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="container margin-top-space" id="game-jams">
-                <h3 class="text-center">Archives - Solo Jams</h3>
-                <p class="text-center"><i>"...A reminder of my humble beginnings and/or a cautionary tale." -Nicky Case</i></p>
-            </div>
-            <div class="album py-5">
-                <div class="container">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="https://madsoup-png.itch.io/its-a-giraffe" target=”_blank”>
+                <hr>
+                <div class="container margin-top-space" id="game-jams">
+                    <h3 class="text-center">Archives - Solo Jams</h3>
+                    <p class="text-center"><i>"...A reminder of my humble beginnings and/or a cautionary tale." -Nicky Case</i></p>
+                </div>
+                <div class="album py-5">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <a href="https://madsoup-png.itch.io/its-a-giraffe" target=”_blank”>
                      <img class="card-img-top active" src="img/iag.gif" width="100%" height="225">
                      </a>
-                                <div class="card-body">
-                                    <h4 class="card-text">It's A Giraffe</h4>
-                                    <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
-                                    <span class="badge text-bg-programming">Programming</span>
-                                    <span class="badge text-bg-art">Art / Animation</span>
-                                    <p class="card-text">
-                                        Silly giraffe evolution game with falling objects.<br>
-                                        <br> ✔ Garbage & leaf collection<br> ✔ Giraffe evolution & animations<br> ✔ Ending cutscene<br>
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://madsoup-png.itch.io/its-a-giraffe?secret=OK0vLxiBOVmnCrL46p76QYOKU','_blank')">Play</button>
+                                    <div class="card-body">
+                                        <h4 class="card-text">It's A Giraffe</h4>
+                                        <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
+                                        <span class="badge text-bg-programming">Programming</span>
+                                        <span class="badge text-bg-art">Art / Animation</span>
+                                        <p class="card-text">
+                                            Silly giraffe evolution game with falling objects.<br>
+                                            <br> ✔ Garbage & leaf collection<br> ✔ Giraffe evolution & animations<br> ✔ Ending cutscene<br>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://madsoup-png.itch.io/its-a-giraffe?secret=OK0vLxiBOVmnCrL46p76QYOKU','_blank')">Play</button>
+                                            </div>
+                                            <small>January 2019</small>
                                         </div>
-                                        <small>January 2019</small>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="https://madsoup-png.itch.io/insideout" target=”_blank”>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <a href="https://madsoup-png.itch.io/insideout" target=”_blank”>
                      <img class="card-img-top active" src="img/io.gif" width="100%" height="225">
                      </a>
-                                <div class="card-body">
-                                    <h4 class="card-text">Insideout</h4>
-                                    <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
-                                    <span class="badge text-bg-programming">Programming</span>
-                                    <span class="badge text-bg-art">Art / Animation</span>
-                                    <p class="card-text">
-                                        Ambient clicker game peering into the mind of a girl struggling with mental illness.<br>
-                                        <br> ✔ Dialogue system w/ choices<br> ✔ Click boost upgrades<br> ✔ Animations<br>
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://madsoup-png.itch.io/insideout?secret=Yec4xBkj9Hqc1pOkXfFFTfqEE9c','_blank')">Play</button>
-                                        <small>January 2019</small>
+                                    <div class="card-body">
+                                        <h4 class="card-text">Insideout</h4>
+                                        <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
+                                        <span class="badge text-bg-programming">Programming</span>
+                                        <span class="badge text-bg-art">Art / Animation</span>
+                                        <p class="card-text">
+                                            Ambient clicker game peering into the mind of a girl struggling with mental illness.<br>
+                                            <br> ✔ Dialogue system w/ choices<br> ✔ Click boost upgrades<br> ✔ Animations<br>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://madsoup-png.itch.io/insideout?secret=Yec4xBkj9Hqc1pOkXfFFTfqEE9c','_blank')">Play</button>
+                                            <small>January 2019</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="https://madsoup-png.itch.io/gae" target=”_blank”>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <a href="https://madsoup-png.itch.io/gae" target=”_blank”>
                      <img class="card-img-top active" src="img/hs.gif" width="100%" height="225">
                      </a>
-                                <div class="card-body">
-                                    <h4 class="card-text">Hat Stealer</h4>
-                                    <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
-                                    <span class="badge text-bg-programming">Programming</span>
-                                    <span class="badge text-bg-art">Art</span>
-                                    <p class="card-text">
-                                        2D platformer where you play as a mischevious apple trying to steal the most sought after top hat from the Top Hat Kingdom.<br>
-                                        <br> ✔ 2D platforming<br> ✔ Hats with guns<br>
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open('https://madsoup-png.itch.io/gae?secret=rq2mHSoptwQ0NyvDfqXOih0TO8','_blank')">Play</button>
+                                    <div class="card-body">
+                                        <h4 class="card-text">Hat Stealer</h4>
+                                        <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
+                                        <span class="badge text-bg-programming">Programming</span>
+                                        <span class="badge text-bg-art">Art</span>
+                                        <p class="card-text">
+                                            2D platformer where you play as a mischevious apple trying to steal the most sought after top hat from the Top Hat Kingdom.<br>
+                                            <br> ✔ 2D platforming<br> ✔ Hats with guns<br>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open('https://madsoup-png.itch.io/gae?secret=rq2mHSoptwQ0NyvDfqXOih0TO8','_blank')">Play</button>
+                                            </div>
+                                            <small>June 2018</small>
                                         </div>
-                                        <small>June 2018</small>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="https://madsoup-png.itch.io/peach-n-love" target=”_blank”>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <a href="https://madsoup-png.itch.io/peach-n-love" target=”_blank”>
                      <img class="card-img-top active" src="img/pnl.gif" width="100%" height="225">
                      </a>
-                                <div class="card-body">
-                                    <h4 class="card-text">Peach 'n Love</h4>
-                                    <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
-                                    <span class="badge text-bg-programming">Programming</span>
-                                    <span class="badge text-bg-art">Art / Animation</span>
-                                    <p class="card-text">
-                                        Whacky food speed dating sim with quirky love interests and different endings.<br>
-                                        <br> ✔ First ever game jam!<br> ✔ Top down movement<br> ✔ Character animations<br> ✔ Dialogue system<br> ✔ Multiple endings<br>
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://madsoup-png.itch.io/peach-n-love?secret=56aKJPdE3BWj4TchnoO5bhgNKI','_blank')">Play</button>
+                                    <div class="card-body">
+                                        <h4 class="card-text">Peach 'n Love</h4>
+                                        <span class="badge text-bg-main">Gamemaker Studio 2 / GML</span>
+                                        <span class="badge text-bg-programming">Programming</span>
+                                        <span class="badge text-bg-art">Art / Animation</span>
+                                        <p class="card-text">
+                                            Whacky food speed dating sim with quirky love interests and different endings.<br>
+                                            <br> ✔ First ever game jam!<br> ✔ Top down movement<br> ✔ Character animations<br> ✔ Dialogue system<br> ✔ Multiple endings<br>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary custom-text-colour" onclick=" window.open(' https://madsoup-png.itch.io/peach-n-love?secret=56aKJPdE3BWj4TchnoO5bhgNKI','_blank')">Play</button>
+                                            </div>
+                                            <small>May 2018</small>
                                         </div>
-                                        <small>May 2018</small>
                                     </div>
                                 </div>
                             </div>
@@ -863,15 +875,16 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <p class="text-center">© 2025 Herleen Dualan</p>
-        <!--<div class="footer-buttons">
+
+            <p class="text-center">© 2025 Herleen Dualan</p>
+            <!--<div class="footer-buttons">
           <a href="docs/HerleenDualan_Resume.pdf" target="_blank"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-file fa-sm"></i></button></a>
           <a href="mailto:herleendualan@yahoo.ca"><button type="button" class="btn btn-outline-light custom-text-colour"><i class="fa-regular fa-envelope fa-sm"></i></button></a>
         </div>-->
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script>
+        </script>
 </body>
 
 </html>
