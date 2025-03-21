@@ -138,12 +138,12 @@ img {
 }
 
  summary::after {
-    content: "Read More...";
+    content: "See More...";
 }
 
 
 
 details[open] summary::after {
-    content: "Read Less";
+    content: "See Less";
     color: darkgrey;
 }
