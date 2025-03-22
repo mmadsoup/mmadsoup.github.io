@@ -87,6 +87,12 @@ hr {
     gap: 15px;
 }
 
+
+.contact-button {
+    display: block;
+    margin: 0 auto;
+}
+
 .grid-container {
     display: grid;
     grid-template-rows: auto auto auto;
